@@ -34,7 +34,7 @@ public class Constants {
     
     public static final String BASE_DIR = "config-data";
 
-    public static String DEFAULT_DOMAINNAME = "a.b.c";
+    public static String DEFAULT_DOMAINNAME = "localhost";
 
     public static String DAILY_DOMAINNAME = "d.e.f";
 
@@ -73,11 +73,13 @@ public class Constants {
     public static final int RECV_WAIT_TIMEOUT = ONCE_TIMEOUT * 5;// 毫秒
 
     /** 获取数据的URI地址，如果不带ip，那么轮换使用ServerAddress中的地址请求 */
-    public static String HTTP_URI_FILE = "/url";
+    //public static String HTTP_URI_FILE = "/url";
+    public static String HTTP_URI_FILE = "/diamond-server/config.co";
 
     /** 获取ServerAddress的配置uri */
-    public static String CONFIG_HTTP_URI_FILE = HTTP_URI_FILE;
-    
+    //public static String CONFIG_HTTP_URI_FILE = HTTP_URI_FILE;
+	public static final String CONFIG_HTTP_URI_FILE = "/diamond-server/diamond";
+
     public static String HTTP_URI_LOGIN = HTTP_URI_FILE;
 
     public static final String ENCODE = "UTF-8";
@@ -176,9 +178,9 @@ public class Constants {
 			throw new IllegalStateException(e);
 		}
 		
-		setValue(old, "CONFIG_HTTP_URI_FILE", "HTTP_URI_FILE");
-		setValue(old, "HTTP_URI_LOGIN", "HTTP_URI_FILE");
-		setValue(old, "DAILY_DOMAINNAME", "DEFAULT_DOMAINNAME");
+//		setValue(old, "CONFIG_HTTP_URI_FILE", "HTTP_URI_FILE");
+//		setValue(old, "HTTP_URI_LOGIN", "HTTP_URI_FILE");
+//		setValue(old, "DAILY_DOMAINNAME", "DEFAULT_DOMAINNAME");
 	}
 	
 	static {
